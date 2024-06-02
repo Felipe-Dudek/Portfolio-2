@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    color: #fff;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 10vh;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 5vh;
+}
+
+.header-itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 10vh;
+    background-color: #111111;
+}
+
+a:hover{
+    transform: scale(1.2);
+}
+
+#home, #technologies, #projects, #contact{
+    margin-top: 10vh;
+    height: 90vh;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    width: 100vw;
+}
+
+.about-me {
+    width: 50vw;
+    height: 50vh;
+}
+
+#home{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+#home h1, #technologies h1, #projects h1, #contact h1{
+    font-size: 50px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#about h1{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+    height: calc(50vh - 5vh);
+}
+
+#technologies {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.languages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.languages img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.web {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.web img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    a {
+        font-size: 15px;
+    }
+
+    #home h1, #technologies h1, #projects h1, #contact h1{
+        font-size: 35px;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    #about h1{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    a {
+        font-size: 10px;
+    }
+    #home h1, #technologies h1, #projects h1, #contact h1{
+        font-size: 30px;
+        text-align: left;
+        margin-left: 10px;
+    }
+    #about h1{
+        font-size: 20px;
+    }
+}
+
