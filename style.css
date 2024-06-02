@@ -134,6 +134,30 @@ a:hover{
     align-items: center;
 }
 
+.contacts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+#contact h1 {
+    font-size: 30px;
+}
+
+.contacts img {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    transition: transform .4s;
+}
+
+.contacts a:hover{
+    transform: scale(1.2);
+}
+
 @media only screen and (max-width: 750px) {
     a {
         font-size: 15px;
@@ -145,11 +169,7 @@ a:hover{
         margin-left: 10px;
     }
 
-    #about h1{
-        font-size: 25px;
-    }
-
-    #technologies h1 {
+    #about h1, #technologies h1 , #contact h1{
         font-size: 25px;
     }
 
@@ -157,6 +177,11 @@ a:hover{
         width: 60px;
         height: 60px;
         margin-right: 10px;
+    }
+
+    .contacts img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -169,11 +194,7 @@ a:hover{
         text-align: left;
         margin-left: 10px;
     }
-    #about h1{
-        font-size: 20px;
-    }
-
-    #technologies h1 {
+    #about h1, #technologies h1, #contact h1{
         font-size: 20px;
     }
 
@@ -181,5 +202,10 @@ a:hover{
         width: 50px;
         height: 50px;
         margin-right: 10px;
+    }
+
+    .contacts img {
+        width: 80px;
+        height: 80px;
     }
 }
