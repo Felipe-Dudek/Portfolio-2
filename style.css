@@ -74,9 +74,22 @@ a:hover{
     width: 100vw;
 }
 
-.about-me {
-    width: 50vw;
+.about-me-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
     height: 50vh;
+}
+
+.about-me-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 50vh;
+}
+
+.about-text {
+    width: 50vw;
 }
 
 #home{
@@ -109,7 +122,7 @@ a:hover{
     align-items: center;
 }
 
-.languages img {
+.languages img, .web img {
     width: 100px;
     height: 100px;
     margin-right: 10px;
@@ -119,12 +132,6 @@ a:hover{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-.web img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -141,13 +148,23 @@ a:hover{
     #about h1{
         font-size: 25px;
     }
+
+    #technologies h1 {
+        font-size: 25px;
+    }
+
+    .languages img, .web img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
 }
 
 @media only screen and (max-width: 550px) {
     a {
         font-size: 10px;
     }
-    #home h1, #technologies h1, #projects h1, #contact h1{
+    #home h1, #projects h1, #contact h1{
         font-size: 30px;
         text-align: left;
         margin-left: 10px;
@@ -155,5 +172,14 @@ a:hover{
     #about h1{
         font-size: 20px;
     }
-}
 
+    #technologies h1 {
+        font-size: 20px;
+    }
+
+    .languages img, .web img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+}
