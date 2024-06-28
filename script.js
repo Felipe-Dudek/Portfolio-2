@@ -31,11 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then(repos => {
           repos.forEach(repo => {
-              const listItem = document.createElement('li');
+              const listItem = document.createElement('div');
+              listItem.classList.add('list-repository');
               const link = document.createElement('a');
+              link.classList.add('list-repository-text');
+              link.setAttribute('target', '_blank');
+              const description = document.createElement('p');
+              description.classList.add('list-repository-text');
+              description.innerText = repo.description;
               link.href = repo.html_url;
               link.textContent = repo.name;
               listItem.appendChild(link);
+              listItem.appendChild(description);
               repoList.appendChild(listItem);
           });
       })
