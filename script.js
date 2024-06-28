@@ -23,17 +23,23 @@ title.forEach(e => {
     typeTitle(e);
 });
 
-const url = 'https://api.github.com/users/Felipe-Dudek/repos';
+document.addEventListener('DOMContentLoaded', () => {
+  const username = 'Felipe-Dudek';
+  const repoList = document.getElementById('list-repository');
 
-fetch(url)
-.then(response => response.json())
-.then(data => {
-  data.forEach(e => {
-    let str = e.contents_url;
-    str = str.replace("{+path}", "")
-    //console.log(str);
-  });
-})
-.catch(error => {
-  console.error('Erro ao obter os repositórios:', error);
+  fetch(`https://api.github.com/users/${username}/repos`)
+      .then(response => response.json())
+      .then(repos => {
+          repos.forEach(repo => {
+              const listItem = document.createElement('li');
+              const link = document.createElement('a');
+              link.href = repo.html_url;
+              link.textContent = repo.name;
+              listItem.appendChild(link);
+              repoList.appendChild(listItem);
+          });
+      })
+      .catch(error => {
+          console.error('Error when fetching repositories:', error);
+      });
 });
